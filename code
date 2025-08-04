@@ -1,0 +1,18 @@
+## 1. Create and Save Sample Dataset
+import pandas as pd
+data = {
+    'CustomerID': ['C001', 'C002', 'C003', 'C004', 'C005', 'C006', 'C007', 'C008'],
+    'Gender': ['Male', 'Female', 'Female', 'Male', 'Female', 'Male', 'Male', 'Female'],
+    'SeniorCitizen': [0, 1, 0, 0, 1, 0, 1, 0],
+    'Partner': ['Yes', 'No', 'No', 'Yes', 'No', 'Yes', 'No', 'Yes'],
+    'Dependents': ['No', 'No', 'Yes', 'No', 'Yes', 'Yes', 'No', 'Yes'],
+    'Tenure': [1, 34, 2, 45, 5, 20, 10, 25],
+    'PhoneService': ['Yes', 'Yes', 'No', 'Yes', 'Yes', 'Yes', 'No', 'Yes'],
+    'InternetService': ['DSL', 'Fiber optic', 'DSL', 'Fiber optic', 'DSL', 'DSL', 'Fiber optic', 'DSL'],
+    'MonthlyCharges': [29.85, 56.95, 53.85, 42.30, 70.70, 45.00, 60.00, 65.00],
+    'TotalCharges': [29.85, 1889.5, 108.15, 1840.75, 151.65, 900.00, 600.00, 1400.00],
+    'Churn': ['No', 'Yes', 'No', 'No', 'Yes', 'No', 'Yes', 'No']
+}
+df = pd.DataFrame(data)
+df.to_csv("churn_data.csv", index=False)
+print("The sample datasets are created and saved as 'churn_data.csv'")
